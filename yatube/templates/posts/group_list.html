@@ -2,10 +2,7 @@
 
 {% block content %}
 <div class="container py-5">
-  <h1>{{ text }}</h1>
-  <p>
-    Группа тайных поклонников графа.
-  </p>
+  <h1>Группа тайных поклонников графа.</h1>
   <article>
     {% for post in posts %}
     <ul>
@@ -13,7 +10,7 @@
         Автор: {{ post.author.get_full_name }}
       </li>
       <li>
-        Дата публикации: {{ post.pub_date.|date:"d E Y" }}
+        Дата публикации: {{ post.pub_date|date:"d E Y" }}
       </li>
     </ul>
     <p>{{ post.text }}
